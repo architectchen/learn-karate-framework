@@ -8,7 +8,7 @@ Karate DSL: API Automation and Performance from Zero to Hero
 
 | Dependency         | Extension                       |
 | ------------------ | ------------------------------- |
-| JDK                |                                 |
+| JDK 17             |                                 |
 | Maven              |                                 |
 | Git                |                                 |
 | Yarn               |                                 |
@@ -18,6 +18,7 @@ Karate DSL: API Automation and Performance from Zero to Hero
 |                    | Extension Pack for Java         |
 |                    | Material Icon Theme             |
 |                    | Open In Default Browser         |
+|                    | Scala Syntax (official)         |
 
 ### 6. Test Project Overview
 
@@ -82,13 +83,25 @@ https://github.com/karatelabs/karate/tree/v1.5.0?tab=readme-ov-file#json-transfo
 
 ```bash
 docker build -t conduitapi-karate .
-docker run -it conduitapi-karate
-
-docker ps -a | grep karate
-docker image ls | grep karate
-docker rm xxx
-docker rmi xxx
+docker run -it --rm conduitapi-karate
 
 docker-compose up --build
 docker-compose down
+```
+
+## Section 6: Performance Testing with Gatling
+
+### 35. Gatling Setup
+
+https://github.com/karatelabs/karate/tree/v1.5.0/karate-gatling
+
+https://github.com/karatelabs/karate/blob/v1.5.0/examples/gatling/pom.xml
+
+```xml
+        <dependency>
+            <groupId>io.karatelabs</groupId>
+            <artifactId>karate-gatling</artifactId>
+            <version>${karate.version}</version>
+            <scope>test</scope>
+        </dependency>
 ```
