@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  conduitapi-karate:
+    image: conduitapi-karate
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./target:/app/target
+      - ~/.m2/repository:/root/.m2/repository
+    command: mvn test

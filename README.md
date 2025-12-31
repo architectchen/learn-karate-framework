@@ -25,7 +25,7 @@ https://conduit.bondaracademy.com/
 
 ### 7. Karate Framework Setup
 
-https://docs.karatelabs.io/
+https://docs.karatelabs.io/getting-started/quick-start
 
 ```bash
 mvn archetype:generate \
@@ -62,9 +62,9 @@ mvn test -Dkarate.env="dev"
 
 ### 20. Schema Validation
 
-https://github.com/karatelabs/karate/blob/v1.5.2/karate-core/src/test/java/com/intuit/karate/core/schema-like.feature
+https://github.com/karatelabs/karate/blob/v1.5.0/karate-core/src/test/java/com/intuit/karate/core/schema-like.feature
 
-https://github.com/karatelabs/karate/blob/v1.5.2/karate-core/src/test/java/com/intuit/karate/core/schema-like-time-validator.js
+https://github.com/karatelabs/karate/blob/v1.5.0/karate-core/src/test/java/com/intuit/karate/core/schema-like-time-validator.js
 
 ## Section 5: Advanced Features
 
@@ -77,3 +77,18 @@ https://github.com/karatelabs/karate/blob/v1.5.0/karate-demo/src/test/java/demo/
 ### 31. JSON Transforms
 
 https://github.com/karatelabs/karate/tree/v1.5.0?tab=readme-ov-file#json-transforms
+
+### 34. Karate in Docker Container
+
+```bash
+docker build -t conduitapi-karate .
+docker run -it conduitapi-karate
+
+docker ps -a | grep karate
+docker image ls | grep karate
+docker rm xxx
+docker rmi xxx
+
+docker-compose up --build
+docker-compose down
+```

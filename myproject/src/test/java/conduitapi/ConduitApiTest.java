@@ -22,7 +22,7 @@ class ConduitApiTest {
     void testParallel() {
         Results results = Runner.path("classpath:conduitapi")
                 .outputCucumberJson(true)
-                .parallel(5);
+                .parallel(1);
         generateReport(results.getReportDir());
         assertTrue(results.getFailCount() == 0, results.getErrorMessages());
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
