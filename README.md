@@ -105,3 +105,23 @@ https://github.com/karatelabs/karate/blob/v1.5.0/examples/gatling/pom.xml
             <scope>test</scope>
         </dependency>
 ```
+
+```
+mvn clean test-compile gatling:test
+```
+
+### 39. Simulation Setup
+
+https://docs.gatling.io/concepts/injection/#open-model
+
+https://docs.gatling.io/concepts/injection/#closed-model
+
+### 40. Feeder From File
+
+https://docs.gatling.io/concepts/session/feeders/#csv-feeders
+
+https://docs.gatling.io/concepts/session/feeders/#strategies
+
+### 43. Dispatcher Configuration
+
+https://github.com/karatelabs/karate/tree/v1.5.0/karate-gatling#increasing-thread-pool-size
